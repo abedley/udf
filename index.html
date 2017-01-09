@@ -1,12 +1,36 @@
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+  <style>
+  body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cabin Sketch';
+    font-size: 10vw;
+  }
+  #row {
+    width: auto;
+  }
+  </style>
 </head>
 <body>
+  <div id="row">
+    <div id="u"></div>
+    <div id="d"></div>
+    <div id="f"></div>
+  </div>
+
+  <script>
+    var u = ['Ultimate', 'Ultra', 'Unicorn', 'Uber', 'Undeniably', 'Unibrow'];
+    var d = ['Disc', 'Duck', 'Dolphin', 'Dog', 'Dance', 'Dick'];
+    var f = ['Forever', 'Force', 'Friends', 'Food', 'Fail', 'Flickers'];
+    document.getElementById("u").textContent = u[Math.floor(Math.random()*u.length)];
+    document.getElementById("d").textContent = d[Math.floor(Math.random()*d.length)];
+    document.getElementById("f").textContent = f[Math.floor(Math.random()*f.length)];
+    </script>
 </body>
-<script>
-  var u = ['ultimate', 'ultra', 'unicorns', 'uber', 'undeniably', 'unibrow'];
-  var d = ['disc', 'duck', 'dolphin', 'dog', 'dance', 'dick'];
-  var f = ['forever', 'force', 'friends', 'food', 'fail', 'flickers'];
-  document.body.textContent = u[Math.floor(Math.random()*u.length)] + " " + d[Math.floor(Math.random()*d.length)] + " " + f[Math.floor(Math.random()*f.length)];
-</script>
 </html>
