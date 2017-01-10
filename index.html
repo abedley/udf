@@ -25,18 +25,22 @@
 </head>
 <body>
   <div id="row">
-    <div id="u"></div>
-    <div id="d"></div>
-    <div id="f"></div>
+    <div id="u">U____</div>
+    <div id="d">D____</div>
+    <div id="f">F____</div>
   </div>
 
   <script>
     var u = ['Ultimate', 'Ultra', 'Unicorn', 'Uber', 'Undeniably', 'Unibrow', 'Underwear', 'Unbathed', 'Uncut', 'Unjust', 'Upstaged', 'Urban', 'Unstained', 'Undercover', 'Unapologetic', 'United'];
     var d = ['Disc', 'Duck', 'Dolphin', 'Dog', 'Dance', 'Dick', 'Daffodil', 'Damage', 'Dessert', 'Dipstick', 'Discovery', 'Dream', 'Dungeon', 'Decent', 'Defiled', 'Deltoid', 'Dragon', 'Disaster'];
     var f = ['Forever', 'Force', 'Friends', 'Food', 'Fail', 'Flickers', 'Factory', 'Fruit', 'Fur', 'Fam', 'Faces', 'Fantasy'];
-    document.getElementById("u").textContent = u[Math.floor(Math.random()*u.length)];
-    document.getElementById("d").textContent = d[Math.floor(Math.random()*d.length)];
-    document.getElementById("f").textContent = f[Math.floor(Math.random()*f.length)];
+    function change() {
+      document.getElementById("u").textContent = u[Math.floor(Math.random()*u.length)];
+      document.getElementById("d").textContent = d[Math.floor(Math.random()*d.length)];
+      document.getElementById("f").textContent = f[Math.floor(Math.random()*f.length)];
+    }
+
+    document.getElementById("row").onclick = change;
     </script>
 </body>
 </html>
